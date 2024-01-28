@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/create" class="active">Create Product</a>
+    </div>
+    <div class="form-add-new">
+      <form action="/create-user" method="post">
+        <fieldset>
+          <legend>Cập nhật sản phẩm</legend>
+
+          <div class="input-group">
+            <label>Mã sản phẩm</label>
+            <input type="text" name="masanpham" />
+          </div>
+          <div class="input-group">
+            <label>Tên sản phẩm</label>
+            <input type="text" name="tensanpham" />
+          </div>
+          <div class="input-group">
+            <label>Mô tả</label>
+            <input type="text" name="mota" />
+          </div>
+          <div class="input-group">
+            <label>Giá</label>
+            <input type="text" name="gia" />
+          </div>
+          <div class="input-group">
+            <label>Số lượng</label>
+            <input type="text" name="soluong" />
+          </div>
+          <div>
+            <button>Lưu</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

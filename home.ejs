@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CỬA HÀNG THIẾT BỊ ĐIỆN TỬ THE SUN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    .table-container {
+      padding: 15px 20px;
+    }
+    .title {
+      font-size: 25px;
+      font-weight: 600;
+      padding-bottom: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: orange;
+    }
+    .editButton {
+      width: 50px;
+      height: 50px;
+      transition: all 1s ease-in;
+    }
+    .editButton:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Trang chủ</a>
+      <a href="/create">Thêm sản phẩm</a>
+    </div>
+    <div class="table-container">
+      <div class="title">DANH SÁCH SẢN PHẨM</div>
+
+      <table>
+        <tr>
+          <th>Mã sản phẩm</th>
+          <th>Tên sản phẩm</th>
+          <th>Mô tả</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Chỉnh sửa</th>
+        </tr>
+        <% for(let i=0; i < dataProduct.length; i++) { %>
+        <tr>
+          <td><%= dataProduct[i].masanpham %></td>
+          <td><%= dataProduct[i].tensanpham %></td>
+          <td><%= dataProduct[i].mota %></td>
+          <td><%= dataProduct[i].gia %></td>
+          <td><%= dataProduct[i].soluong %></td>
+
+          <td>
+            <form
+              action="/editproduct/<%=dataProduct[i].masanpham%>"
+              method="get"
+            >
+              <button type="submit" class="editButton">Sửa sản phẩm</button>
+            </form>
+
+            <form action="/delete-product" method="post">
+              <input
+                type="text"
+                hidden
+                value="<%=dataProduct[i].masanpham%>"
+                name="productId"
+                ư
+              /><button type="submit" class="editButton">Xóa sản phẩm</button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>

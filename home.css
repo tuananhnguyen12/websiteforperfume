@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+body {
+  background-color: whitesmoke;
+}
+header {
+  background: rgb(30, 156, 120);
+}
+header .container .content__header {
+  display: flex;
+  align-items: center;
+}
+header .container .content__header .logo__header {
+  flex-basis: 10%;
+}
+header .container .content__header .menu__header {
+  flex-basis: 80%;
+}
+header .container .content__header .card__head {
+  flex-basis: 10%;
+}
+header .container .content__header .card__head .card {
+  position: relative;
+  width: 60px;
+  top: -5px;
+}
+header .container .content__header .menu__header nav .nav__link li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+header .container .content__header .menu__header nav .nav__link li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+header .container .content__header .menu__header nav .nav__link li a:hover {
+  text-decoration: underline;
+}
+header .container .content__header .card__head {
+  flex-basis: 45%;
+}
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+}
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/*Thanh tìm kiếm */
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+}
+form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  margin-right: 450px;
+}
+input[type="text"],
+button {
+  margin-left: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #30445b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/*--endheader--*/
+/*--Banner--*/
+.slide__body .container .container_slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slide__body .container .container_slide .slides {
+  width: 100%;
+  display: flex;
+}
+.slide__body .container .container_slide .slides .item {
+  min-width: 100%;
+}
+.slide__body .container .container_slide .slides .item img {
+  width: 100%;
+  display: block;
+}
+.slide__body .container .container_slide .next,
+.prev {
+  position: absolute;
+  top: 50%;
+  padding: 10px 15px;
+  background: #000;
+  color: #fff;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.slide__body .container .container_slide .next:hover,
+.prev:hover {
+  background: sienna;
+}
+.slide__body .container .container_slide .next {
+  right: 0;
+}
+/*Mục sản phẩm*/
+.custom-heading {
+  font-size: 20px;
+  color: silver;
+  font-family: Arial, sans-serif;
+}
+
+.custom-text {
+  font-size: 18px;
+  color: black;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/*Thẻ chưa sản phẩm mua hàng*/
+.card {
+  display: inline-block;
+  color: #30445b;
+}
+.card {
+  margin-right: 40px;
+}
+.card {
+  position: relative;
+  left: 160px;
+  top: 10px;
+}
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*--Phần chuyển trang--*/
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: silver;
+}
+
+/*--Cuối trang--*/
